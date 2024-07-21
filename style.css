@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    background-color: rgb(240, 104, 86);
+    padding: 16px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container a {
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+    font-size: large;
+    font-weight: bold;
+}
+
+/* Menu*/
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    padding: 0 22px;
+}
+
+.menu {
+    display: flex;
+    font-size: x-large;
+    margin-bottom: 50px;
+}
+
+.menu li {
+    list-style: none;
+    padding: 8px;
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    padding: 8px;
+    position: absolute;
+    border-color: black;
+    background-color: rgb(236, 169, 160);
+}
+
+.submenu a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+/* SOBRE A LOJA */
+
+.sobre-container {
+    display: flex;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.sobre-loja-imagem {
+    margin-right: 20px;
+}
+
+.info-loja h2 {
+    font-size: 32px;
+    margin-bottom: 4px;
+}
+
+.info-loja p {
+    font-size: 18px;
+}
+
+.linha-personalizada {
+    border: none;
+    height: 2px;
+    background-color: black;
+    margin-bottom: 18px;
+}
+
+/* MAIS VENDIDOS */
+
+.mais-vendidos {
+    margin: 0 auto;
+    max-width: 1024px;
+    margin-top: 100px;
+    padding: 0 22px;
+}
+
+.mais-vendidos h2 {
+    font-size: 32px;
+}
+
+.lista-produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 24.25%);
+    column-gap: 1%;
+    margin-bottom: 100px;
+}
+
+.lista-produtos img {
+    max-width: 100%;
+    max-height: 250px;
+}
+
+.lista-produtos p {
+    font-size: x-large;
+}
+
+.lista-produtos button {
+    background-color: rgb(240, 104, 86);
+    color: #fff;
+    padding: 8px 70px;
+    border: none;
+    margin-top: 8px;
+    cursor: pointer;
+    font-size: large;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: rgb(240, 104, 86);
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Media Queries */
+
+@media (max-width: 640px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-container {
+        display: block;
+    }
+
+    .sobre-loja-imagem img {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .info-loja h2 {
+        text-align: center;
+        margin-bottom: 12px;
+    }
+
+    .linha-personalizada {
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .mais-vendidos .container h2,
+    .lista-produtos {
+        text-align: center;
+    }
+
+    .lista-produtos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto {
+        margin-bottom: 70px;
+        text-align: center;
+    }
+
+    .produto img {
+        margin-bottom: -50px;
+    }
+
+    .botao {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+    header .container {
+        padding: 0 20px;
+    }
+
+    .menu {
+        font-size: 32px;
+    }
+
+    .sobre-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .sobre-loja-imagem {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .info-loja h2 {
+        margin-bottom: 12px;
+    }
+
+    .linha-personalizada {
+        width: 40%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .info-loja p {
+        font-size: 24px;
+    }
+
+    .lista-produtos {
+        display: grid;
+        grid-template-columns: repeat(2, 48%);
+        column-gap: 1%;
+        justify-content: space-between;
+        margin-bottom: 100px;
+    }
+
+    .mais-vendidos .container h2,
+    .info-loja h2 {
+        text-align: center;
+    }
+
+    .produto h2 {
+        margin-top: -50px;
+    }
+
+    .produto .botao,
+    .produto p {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .produto p {
+        font-size: 32px;
+    }
+}
